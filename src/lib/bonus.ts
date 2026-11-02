@@ -1,10 +1,5 @@
-/**
- * Bonus wagering maths.
- *
- * Conventions: money in the player's currency, rates as fractions (0.96, not 96).
- * "Turnover" is the total amount that must be staked; "wagering requirement"
- * is the headline multiplier the casino quotes.
- */
+// Rates are fractions here (0.96, not 96). "turnover" = total stakes required,
+// "multiplier" = the headline Nx the casino quotes.
 
 export type WageringBase = "bonus" | "deposit+bonus";
 export type BonusType = "cashable" | "sticky";

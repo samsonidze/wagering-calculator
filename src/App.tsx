@@ -90,12 +90,12 @@ export default function App() {
 
       <footer className="mx-auto max-w-[1120px] px-4 pb-8 pt-6 text-xs text-muted sm:px-6">
         <p>
-          For understanding bonus terms, not for beating them: a positive EV says nothing about variance, bet caps,
-          excluded games, time limits or withdrawal rules. Built by{" "}
+          For understanding bonus terms, not for beating them. A positive EV says nothing about variance, bet caps,
+          excluded games, time limits or withdrawal rules.{" "}
           <a href="https://github.com/samsonidze/wagering-calculator" className="underline underline-offset-2 hover:text-ink">
-            Giorgi Samsonidze
+            Source on GitHub
           </a>
-          .
+          . © 2026 Giorgi Samsonidze
         </p>
       </footer>
     </div>

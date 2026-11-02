@@ -1,12 +1,5 @@
-/**
- * Monte Carlo playthrough.
- *
- * Each bet either loses the stake or hits for a fixed payout. Hit probability
- * is set by the volatility preset and the payout is scaled so the mean return
- * equals the RTP. That is a crude slot — real games have long payout tails —
- * but it reproduces the thing EV alone hides: with 35x wagering most sessions
- * bust long before the requirement is met.
- */
+// Monte Carlo playthrough. Two-outcome game: lose the stake or hit a fixed payout.
+// Crude compared to a real slot, but enough to show how often sessions bust.
 
 export type Volatility = "low" | "medium" | "high";
 
@@ -43,7 +36,7 @@ export interface SimResult {
   meanBets: number;
 }
 
-/** Small, fast, seedable PRNG (mulberry32) so simulations are reproducible in tests. */
+// mulberry32: tiny seedable PRNG, so tests and the UI get the same numbers for the same inputs
 export function mulberry32(seed: number): () => number {
   let a = seed >>> 0;
   return () => {
